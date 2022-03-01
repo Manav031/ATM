@@ -16,7 +16,7 @@ MUTATION_RATE = 0.05
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'templates/index.html')
 
 
 def login_view(request):
@@ -28,10 +28,10 @@ def login_view(request):
             context = {
                 'error': "Username or Password is wrong!"
             }
-            return render(request, 'login.html', context)
+            return render(request, 'templates/login.html', context)
         login(request, user)
         return redirect('dashboard')
-    return render(request, 'login.html')
+    return render(request, 'templates/login.html')
 
 
 def signup(request):
@@ -42,7 +42,7 @@ def signup(request):
             return redirect('/login')
     form = CreateUserForm()
     context = {'form': form}
-    return render(request, 'signup.html', context)
+    return render(request, 'templates/signup.html', context)
 
 
 def log_out(request):
@@ -54,7 +54,7 @@ def dashboard(request):
     user = None
     if request.user.is_authenticated:
         user = request.user
-    return render(request, 'dashboard.html')
+    return render(request, 'templates/dashboard.html')
 
 
 def add_teacher(request):
@@ -70,7 +70,7 @@ def add_teacher(request):
             return redirect('view_teacher')
 
     context = {'form': form}
-    return render(request, 'add-teacher.html', context=context)
+    return render(request, 'templates/add-teacher.html', context=context)
 
 
 def view_teacher(request):
@@ -82,7 +82,7 @@ def view_teacher(request):
     context = {
         'data': data,
     }
-    return render(request, 'view-teacher-list.html', context=context)
+    return render(request, 'templates/view-teacher-list.html', context=context)
 
 
 def update_teacher(request, id):
@@ -96,7 +96,7 @@ def update_teacher(request, id):
             return redirect('view_teacher')
 
     context = {'form': form}
-    return render(request, 'update-teacher.html', context=context)
+    return render(request, 'templates/update-teacher.html', context=context)
 
 
 def delete_teacher(request, id):
@@ -118,7 +118,7 @@ def add_subject(request):
             return redirect('view_subject')
 
     context = {"form": form}
-    return render(request, 'add-subject.html', context)
+    return render(request, 'templates/add-subject.html', context)
 
 
 def view_subject(request):
@@ -128,7 +128,7 @@ def view_subject(request):
 
     data = Course.objects.all()
     context = {"data": data}
-    return render(request, 'view-subject.html', context)
+    return render(request, 'templates/view-subject.html', context)
 
 
 def update_subject(request, id):
@@ -142,7 +142,7 @@ def update_subject(request, id):
             return redirect('view_subject')
 
     context = {"form": form}
-    return render(request, 'update-subject.html', context)
+    return render(request, 'templates/update-subject.html', context)
 
 
 def delete_subject(request, id):
@@ -161,7 +161,7 @@ def add_classroom(request):
             return redirect('view_classroom')
 
     context = {"form": form}
-    return render(request, 'add-classroom.html', context)
+    return render(request, 'templates/add-classroom.html', context)
 
 
 def view_classroom(request):
@@ -171,7 +171,7 @@ def view_classroom(request):
 
     data = Room.objects.all()
     context = {"data": data}
-    return render(request, 'view-classroom.html', context)
+    return render(request, 'templates/view-classroom.html', context)
 
 
 def update_classroom(request, id):
@@ -185,7 +185,7 @@ def update_classroom(request, id):
             return redirect('view_classroom')
 
     context = {"form": form}
-    return render(request, 'update-classroom.html', context)
+    return render(request, 'templates/update-classroom.html', context)
 
 
 def delete_classroom(request, id):
@@ -205,7 +205,7 @@ def add_batches(request):
     context = {
         'form': form
     }
-    return render(request, 'add-batch.html', context)
+    return render(request, 'templates/add-batch.html', context)
 
 
 def view_batches(request):
@@ -215,7 +215,7 @@ def view_batches(request):
 
     data = Section.objects.all()
     context = {'data': data}
-    return render(request, 'view-batch.html', context)
+    return render(request, 'templates/view-batch.html', context)
 
 
 def update_batches(request, id):
@@ -229,7 +229,7 @@ def update_batches(request, id):
             return redirect('view_batch')
 
     context = {'form': form}
-    return render(request, 'update-batches.html', context=context)
+    return render(request, 'templates/update-batches.html', context=context)
 
 
 def delete_batches(request, id):
@@ -248,7 +248,7 @@ def add_department(request):
             return redirect('view_department')
 
     context = {'form': form}
-    return render(request, 'add-department.html', context)
+    return render(request, 'templates/add-department.html', context)
 
 
 def view_department(request):
@@ -258,7 +258,7 @@ def view_department(request):
 
     data = Department.objects.all()
     context = {'data': data}
-    return render(request, 'view-department.html', context)
+    return render(request, 'templates/view-department.html', context)
 
 
 def update_department(request, id):
@@ -272,7 +272,7 @@ def update_department(request, id):
             return redirect('view_department')
 
     context = {'form': form}
-    return render(request, 'update-department.html', context)
+    return render(request, 'templates/update-department.html', context)
 
 
 def delete_department(request, id):
@@ -291,13 +291,13 @@ def add_timeslot(request):
             return redirect('view_timeslots')
 
     context = {'form': form}
-    return render(request, 'add-timeslot.html', context)
+    return render(request, 'templates/add-timeslot.html', context)
 
 
 def view_timeslots(request):
     timeslots = MeetingTime.objects.all()
     context = {'data': timeslots}
-    return render(request, 'view-timeslots.html', context)
+    return render(request, 'templates/view-timeslots.html', context)
 
 
 def update_timeslot(request, id):
@@ -311,7 +311,7 @@ def update_timeslot(request, id):
             return redirect('view_timeslots')
 
     context = {'form': form}
-    return render(request, 'update-timeslot.html', context)
+    return render(request, 'templates/update-timeslot.html', context)
 
 
 def delete_timeslot(request, id):
@@ -539,5 +539,5 @@ def timetable(request):
         population.get_schedules().sort(key=lambda x: x.get_fitness(), reverse=True)
         schedule = population.get_schedules()[0].get_classes()
 
-    return render(request, 'gentimetable.html', {'schedule': schedule, 'sections': Section.objects.all(),
+    return render(request, 'templates/gentimetable.html', {'schedule': schedule, 'sections': Section.objects.all(),
                                                  'times': MeetingTime.objects.all()})
