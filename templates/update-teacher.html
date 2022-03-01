@@ -1,0 +1,29 @@
+{% extends 'constant/main.html' %}
+
+{% block title %} Update Teacher {% endblock %}
+
+{% block content %}
+
+    <div class="splash-secondary">
+        <div class="login">
+            <h1>Update Tecaher</h1>
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="input-box">
+                    <label for="UserId">Teacher Id</label>
+                    {{form.uid}}
+                </div>
+
+                <div class="input-box">
+                    <label for="UserId">Name</label>
+                    {{form.name}}
+                </div>
+                
+                <input type="submit" value="Update" class="button">
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'constant/main.html' %}
+
+{% block title %} Update Subject {% endblock %}
+
+{% block content %}
+
+<div class="splash-secondary">
+    <div class="login">
+        <h1>Update Subject</h1>
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="input-box">
+                <label for="UserId">Subject Number</label>
+                {{form.course_number}}
+            </div>
+
+            <div class="input-box">
+                <label for="UserId">Subject Name</label>
+                {{form.course_name}}
+            </div>
+
+            <div class="input-box">
+                <label for="UserId">Number of Students</label>
+                {{form.max_numb_students}}
+            </div>
+
+            <div class="input-box">
+                <label for="UserId">Teacher</label>
+                {{form.instructors}}
+            </div>
+            
+            <input type="submit" value="Update" class="button">
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

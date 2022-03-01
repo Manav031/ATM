@@ -1,0 +1,36 @@
+{% extends 'constant/main.html' %}
+
+{% block title %} Update Timeslot {% endblock %}
+
+{% block content %}
+<!-- {% include 'constant/header.html' %} -->
+
+<div class="splash-secondary">
+    <div class="login">
+        <h1>Update Timeslot</h1>
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="input-box">
+                <label for="UserId">MeetingTime Id</label>
+                {{form.pid}}
+            </div>
+
+            <div class="input-box">
+                <label for="UserId">Time</label>
+                {{form.time}}
+            </div>
+
+            <div class="input-box">
+                <label for="UserId">Day</label>
+                {{form.day}}
+            </div>
+            
+            <input type="submit" value="Update" class="button">
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

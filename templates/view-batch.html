@@ -1,0 +1,43 @@
+{% extends 'constant/main.html' %}
+
+{% block title %} View Batch {% endblock %}
+
+{% block content %}
+{% include 'constant/header2.html' %}
+
+<div class="view">
+    <div class="back-btn">
+        <a href="{% url 'dashboard' %}" class="button2"><i class="fa fa-arrow-left" aria-hidden="true"></i>Dashboard</a>
+    </div>
+
+    <h1 style="text-align: center;">Batch List</h1>
+
+<center>
+    <a href="{% url 'add_batch' %}" class="button" style="display: inline-block;text-align: center;">Add</a>
+</center>
+    <table class="teacher-table">
+        <thead>
+            <tr>
+                <th>Batch Number</th>
+                <th>Department</th>
+                <th>Number of Lectures per Week</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for i in data %}
+            <tr>
+                <td>{{i.section_id}}</td>
+                <td>{{i.department}}</td>
+                <td>{{i.num_class_in_week}}</td>
+                <td><a href="{% url 'update_batch' i.section_id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                <td><a href="{% url 'delete_batch' i.section_id %}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+    {% include 'constant/footer2.html' %}
+{%endblock %}

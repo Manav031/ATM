@@ -1,0 +1,40 @@
+{% extends 'constant/main.html' %}
+{% block title %}Main{% endblock %}
+
+{% block content %}
+{% include 'constant/header.html' %}
+    <section class="splash">
+        <div class="img-container">
+            <div class="splash-img">
+            </div>
+            <h1>AutomaticTimetableGenerator</h1>
+        </div>
+        <div class="content-container">
+            <h1>Instructions</h1>
+            <ol>
+                <li>Create a User First. If already exist go to Login page.</li>
+                <li>After Login use features of Dashboard Tab.</li>
+                <li>Add a Teacher. Update a Teacher.</li>
+                <li>Add classrooms, Update Classrooms</li>
+                <li>Add Subject, update Subject.</li>
+                <li>Generate TimeTable</li>
+            </ol>
+            <div class="buttons">
+                <a href="{% url 'login' %}" class="btn">Login</a>
+                <a href="{% url 'signup' %}" class="btn">SignUp</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-us">
+                <h1>About</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, itaque ratione autem voluptas, aliquid tempore facilis maiores eligendi cum repellat quam libero ex repellendus rem quia! Exercitationem vero, ad tenetur, minus, dignissimos quam laboriosam voluptas quae corrupti culpa officia vitae sequi. Distinctio iure corporis eius aperiam vitae blanditiis recusandae facilis.</p>
+                <a href="#">ReadMore</a>
+            </div>
+            <div class="about-img"></div>
+        </div>
+    </section>
+    {% include 'constant/footer.html' %}
+    {% endblock %}

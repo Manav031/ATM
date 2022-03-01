@@ -1,0 +1,109 @@
+{% extends 'constant/main.html' %}
+
+{% block title %} Dashboard {% endblock %}
+
+{% block content %}
+
+    <div class="sidebar">
+      <div class="logo">
+        <h1>ATG</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        </li>
+        <li>
+          <a href="{% url 'view_teacher' %}"
+            ><i class="fa fa-plus" aria-hidden="true"></i>Add Teacher</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'view_classroom' %}">
+            <i class="fa fa-plus" aria-hidden="true"></i>Add ClassRooms</a>
+        </li>
+        <li>
+          <a href="{% url 'view_timeslots' %}"><i class="fa fa-plus" aria-hidden="true"></i>Add TimeSlots</a>
+        </li>
+
+        <li>
+          <a href="{% url 'view_subject' %}"><i class="fa fa-plus" aria-hidden="true"></i>Add Subjects</a>
+        </li>
+
+        <li>
+          <a href="{% url 'view_department' %}"><i class="fa fa-plus" aria-hidden="true"></i>Add Department</a>
+        </li>
+
+        <li>
+          <a href="{% url 'view_batch' %}"><i class="fa fa-plus" aria-hidden="true"></i>Add Batch</a>
+        </li>
+
+        <li>
+          <a href="{% url 'generate_timetable' %}" target="_blank"><i class="fa fa-clock-o" aria-hidden="true"></i>Generate TimeTable</a>
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <nav>
+        <h1>Dashboard</h1>
+        <ul>
+          <li>
+            <span style="font-size: 20px;cursor: pointer;">{{user.username}}<i class="fa fa-user-circle" aria-hidden="true"></i></span>
+          </li>
+          <li>
+            <a href="{% url 'logout' %}">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="home">
+        <h1>Home</h1>
+        <div class="intro">
+          <h3>Hello {{user.username}}! Let's Automate The TimeTable.</h3>
+          <p>The Automatic TimeTable Generator with Genetics Algorithm works with different data that are provided. In this Algorithm data is main for generating different different combinations. This Algorithm will create the TimeTable without any clashes. To get Started Click On the Button.</p>
+          <a href="{% url 'add_teacher' %}" class="button1">Get Started!</a>
+        </div>
+      </div>
+
+      <div class="create-tt">
+        <h1>Instruction</h1>
+
+        <div class="cards">
+          <div class="card">
+            <h2>1. Add Teacher</h2>
+            <p>Click on the add teachers button to get started and the respective Teachers. Wrong details can be changed from the add teacher section.</p>
+          </div>
+
+          <div class="card">
+            <h2>2. Add Classrooms</h2>
+            <p>Click on the Add classroom button and add the classroom. Wrong details can be changed from the from the Add classroom section.</p>
+          </div>
+
+          <div class="card">
+            <h2>3. Add TimeSlots</h2>
+            <p>Click on the Add Timeslot button and add the slots. Wrong details can be changed from the from the Add Timeslots section. &nbsp;</p>
+          </div>
+
+          <div class="card">
+            <h2>4. Add Subjects</h2>
+            <p>Click on the Add Subjects button and add the Subjects. Wrong details can be changed from the from the Add Subjects section.</p>
+          </div>
+
+          <div class="card">
+            <h2>5. Add Department</h2>
+            <p>Click on the Add Department button and add the Department. Wrong details can be changed from the from the Add department section.</p>
+          </div>
+
+          <div class="card">
+            <h2>6. Add Batches</h2>
+            <p>Click on the Add Batches button and add the batches. Wrong details can be changed from the from the Add batches section.</p>
+          </div>
+
+          <div class="card">
+            <h2>7. Generate TimeTable</h2>
+            <p>Click on the Generate TimeTable button and Give some time it won't take much time, but some times it'll take upto 5 minitues to generate the TimeTable.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+{% endblock %}

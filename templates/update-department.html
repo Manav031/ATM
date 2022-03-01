@@ -1,0 +1,31 @@
+{% extends 'constant/main.html' %}
+
+{% block title %} Update Department {% endblock %}
+
+{% block content %}
+<!-- {% include 'constant/header.html' %} -->
+
+<div class="splash-secondary">
+    <div class="login">
+        <h1>Update Department</h1>
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="input-box">
+                <label for="UserId">Name</label>
+                {{form.dept_name}}
+            </div>
+
+            <div class="input-box">
+                <label for="UserId">Subjects</label>
+                {{form.courses}}
+            </div>
+            
+            <input type="submit" value="Update" class="button">
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

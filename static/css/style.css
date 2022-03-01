@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-size: 12px;
+    position: relative;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    letter-spacing: 6px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    padding: .8em;
+}
+
+header nav ul li a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #111;
+}
+
+.sticky {
+    background-color: #111;
+    color: #fff;
+}
+
+.sticky ul li a {
+    color: #fff;
+}
+
+.splash {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5em;
+    align-items: center;
+    background: url('../img/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.splash-img {
+    width: 500px;
+    height: 500px;
+    background: url('../img/splash-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-container {
+    width: 30%;
+    height: 60%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.content-container {
+    width: 30%;
+    height: 60%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.splash h1 {
+    font-size: 2rem;
+}
+
+.splash ol {
+    padding: 3em;
+}
+
+.splash ol li {
+    font-size: 1.4rem;
+}
+
+.about {
+    padding: 5em;
+}
+
+.about .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.about .container .about-us {
+    width: 60%;
+    height: auto;
+    padding: 1em;
+}
+
+.about-us h1 {
+    font-size: 4rem;
+}
+
+.about-us p {
+    font-size: 1.4rem;
+    margin: 1em 0;
+}
+
+.about-us a,.btn {
+    position: relative;
+    bottom: -.5em;
+    left: 0;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 1em .5em;
+    padding: .8em;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 24px;
+    border: none;
+    transition: all .2s ease-in;
+}
+
+.about-us a:hover, .btn:hover {
+    background: transparent;
+    border: 2px solid blueviolet;
+    color: #111;
+    letter-spacing: 2px;
+}
+
+.about-img {
+    width: 40%;
+    height: auto;
+    background: url('../img/images.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+footer {
+    padding: 6em;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #111;
+    color: white;
+}
+
+.purpose {
+    width: 40%;
+}
+
+.purpose h1 {
+    margin-bottom: .4em;
+    letter-spacing: 2px;
+}
+
+.purpose p {
+    font-size: 1.2rem;
+}
+
+.quicklinks {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.quicklinks h1 {
+    letter-spacing: 2px;
+}
+
+.quicklinks ul {
+    list-style: none;
+}
+
+.quicklinks ul li {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.quicklinks ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.team {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team h1 {
+    letter-spacing: 2px;
+}
+
+.team ol li {
+    font-size: 1.6rem;
+}
+
+.credits {
+    background-color: #000;
+    padding: 1em;
+    color: #fff;
+}
+
+.credits p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.splash-secondary {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/splash-secondary.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    margin-top: 5em;
+    padding: 1em 2em;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login h1 {
+    font-size: 3.6rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: .8em;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form .input-box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box input {
+    display: block;
+    margin: .5em 0;
+    font-size: 1.2rem;
+    width: 90%;
+    padding: .8em;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #111;
+    outline: none;
+    font-weight: 700;
+}
+
+.input-box select {
+    width: 90%;
+    margin: .5em 0;
+    font-size: 1.2rem;
+    padding: .8em;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #111;
+    outline: none;
+    font-weight: 700;
+}
+
+.input-box select option {
+    width: 90%;
+    margin: .5em 0;
+    font-size: 1.2rem;
+    padding: .8em;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #111;
+    outline: none;
+    font-weight: 700;
+}
+
+.input-box label {
+    margin-bottom: .2em;
+    font-size: 1.4rem;
+    color: #111;
+}
+
+.button {
+    display: block;
+    text-decoration: none;
+    padding: .6em 1em;
+    background: transparent;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    margin: .8em 0;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    background-color: blueviolet;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+i {
+    font-size: 1.2rem;
+    margin: 0 .2em;
+}
+
+.sidebar {
+    position: fixed;
+    padding: 1em;
+    /* left: 0;
+    top: 0; */
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidebar .logo {
+    position: relative;
+    font-size: 1.8rem;
+    letter-spacing: 6px;
+    color: #fff;
+    margin-bottom: .5em;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: .8em;
+    margin: .5em 0;
+}
+
+.sidebar ul li a {
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.sidebar ul li a i {
+    margin: 0 .4em;
+}
+
+main {
+    padding: 0;
+    width: 80%;
+    float: right;
+    position: relative;
+}
+
+main nav {
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 5px 5px 5px rgb(211, 211, 211); */
+}
+
+main nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+}
+
+main nav ul li {
+    padding: .8em;
+}
+
+main nav ul li a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #111;
+}
+
+main nav h1 {
+    padding: 0 .5em;
+}
+
+.home {
+    padding: 1em;
+}
+
+.home h1 {
+    font-size: 3rem;
+}
+
+.home .teachers-list {
+    margin: 1em;
+    padding: 1em;
+    width: 20%;
+    background-color: rgb(231, 231, 231);
+    text-align: center;
+}
+
+#teachers_number {
+    display: block;
+}
+
+.teachers-list h1 {
+    font-size: 2rem;
+    margin-bottom: .4em;
+}
+
+.teachers-list .number {
+    font-size: 1.8rem;
+    padding: 0 .5em;
+}
+
+.home .container {
+    display: flex;
+}
+
+.create-tt {
+    padding: 1em;
+}
+
+.create-tt h1 {
+    font-size: 3rem;
+}
+
+.create-tt .create {
+    padding: 2em;
+    width: 40%;
+    background-color: rgb(231, 231, 231);
+}
+
+.create form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create label {
+    font-size: 1.4rem;
+}
+
+.create input {
+    padding: .2em;
+    font-size: 1.4rem;
+}
+
+.create input[type="submit"] {
+    display: inline-block;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 16px;
+    width: 80%;
+}
+
+table th {
+    background-color: #8A2BE2;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 12px 15px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom:2px solid #8A2BE2;
+}
+table td {
+    text-align: center;
+}
+
+.teacher-table {
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 16px;
+    width: 80%;
+}
+
+.teacher-table thead tr {
+    background-color: #8A2BE2;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.teacher-table th, .teacher-table td {
+    padding: 12px 15px;
+}
+
+.teacher-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.teacher-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.teacher-table tbody tr:last-of-type {
+    border-bottom:2px solid #8A2BE2;
+}
+
+.teacher-table a {
+    color: black;
+}
+
+.delete {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete form {
+    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.delete form p {
+    font-size: 18px;
+}
+
+.delete form a, .delete form input[type="submit"] {
+    display: inline-block;
+    /* width: 100px; */
+    text-align: center;
+    color: #111;
+    font-size: 18px;
+    padding: 10px;
+    background: transparent;
+    /* background-color: #8A2BE2; */
+    text-decoration: none;
+    border: none;
+    margin: 10px;
+    border-radius: 22px;
+    border: 2px solid #8A2BE2;
+    transition: .2s ease;
+}
+
+.delete form a:hover, .delete form input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #8A2BE2;
+    color: #f3f3f3;
+}
+
+
+
+/*new */
+
+.edit-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.edit h1 {
+    text-align: center;
+}
+
+.edit form input {
+    display: block;
+    width: 100%;
+}
+
+.edit input {
+    display: block;
+    margin: .5em 0;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: .8em;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #111;
+    outline: none;
+    font-weight: 700;
+}
+
+.edit select {
+    width: 90%;
+    margin: .5em 0;
+    font-size: 1.2rem;
+    padding: .8em;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #111;
+    outline: none;
+    font-weight: 700;
+}
+
+.edit select option {
+    width: 90%;
+    margin: .5em 0;
+    font-size: 1.2rem;
+    padding: .8em;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #111;
+    outline: none;
+    font-weight: 700;
+}
+
+.edit input[type="submit"] {
+    border: 2px solid #8A2BE2;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+.edit input[type="submit"]:hover {
+    background-color: #8A2BE2;
+    color: #f2f2f2;
+}
+
+.intro {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.intro h3 {
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+.intro p {
+    font-size: 1.6rem;
+    text-align: justify;
+    margin: 10px;
+    letter-spacing: .5px;
+    word-spacing: 2px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+}
+
+.card h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.card p {
+    margin: 5px 0;
+    text-align: justify;
+    font-size: 1.4rem;
+}
+
+.view {
+    margin-top: 100px;
+}
+
+.head2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #111;
+    color: #fff;
+}
+
+.head2 a {
+    color: #fff;
+}
+
+.back-btn {
+    margin: 10px 140px;
+}
+
+.back-btn .button2 {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.back-btn i {
+    margin: 0 10px;
+}
+
+.button1 {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #8A2BE2;
+    width: 160px;
+    text-align: center;
+    font-size: 1.6rem;
+    border-radius: 22px;
+    color: #111;
+    transition: all .2s ease-in-out;
+}
+
+.button1:hover {
+    color: #fff;
+    background-color: #8A2BE2;
+    
+}

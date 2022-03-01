@@ -1,0 +1,22 @@
+{% extends 'constant/main.html' %}
+
+{% block content %}
+
+<header id="header" class="head2">
+    <div class="logo">
+        <h1><a href="{% url 'dashboard' %}" style="text-decoration: none;">ATG</a></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'view_teacher' %}">Add Teacher</a></li>
+            <li><a href="{% url 'view_classroom' %}">Add Classroom</a></li>
+            <li><a href="{% url 'view_timeslots' %}">Add TimeSlots</a></li>
+            <li><a href="{% url 'view_subject' %}">Add Subject</a></li>
+            <li><a href="{% url 'view_department' %}">Add Department</a></li>
+            <li><a href="{% url 'view_batch' %}">Add Batch</a></li>
+            <li><a href="{% url 'generate_timetable' %}">Generate TimeTable</a></li>
+        </ul>
+    </nav>
+</header>
+
+{% endblock %}

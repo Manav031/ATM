@@ -1,0 +1,29 @@
+{% extends 'constant/main.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+{% include 'constant/header.html' %}
+
+<div class="splash-secondary">
+    <div class="login">
+        <h1>Login</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="input-box">
+                <label for="UserId">UserId</label>
+                <input type="text" id="UserId" name="username">
+            </div>
+            <div class="input-box">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="password">
+            </div>
+            <input type="submit" value="Login" class="button">
+            <p style="font-size: 18px;">Don't have an account? <a href="{% url 'signup' %}">SignUp</a></p>
+            {% if error %}
+            <p style="color:red;font-weight: bold;font-size: 20px;">{{error}}</p>
+        {% endif %}
+        </form>
+    </div>
+</div>
+{% include 'constant/footer.html' %}
+{% endblock %}

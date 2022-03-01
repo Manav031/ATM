@@ -1,0 +1,228 @@
+{% extends 'constant/main.html' %}
+
+{% block title %} TimeTable {% endblock %}
+
+{% block content %}
+
+{% for section in sections %}
+
+<table>
+    <thead>{{ section.section_id }}  | {{section.department}} </thead>
+    <tr>
+        <th>9:30 to 10:30</th>
+        <th>10:30 to 11:30</th>
+        <th>12:15 to 1:15</th>
+        <th>1:15 to 2:15</th>
+        <th>2:30 to 3:30</th>
+        <th>3:30 to 4:30</th>
+    </tr>
+    {% for class in schedule %}
+        {%if class.meeting_time__day == "Monday" %}
+            <td>{{class.meeting_time__day}}</td>
+            {% if class.meeting_time__pid == "M1" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "M2" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "M3" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "M4" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "M5" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "M6" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+        {% endif %}
+
+        {%if class.meeting_time__day == "Tuesday" %}
+            <td>{{class.meeting_time__day}}</td>
+            {% if class.meeting_time__pid == "T1" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "T2" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "T3" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "T4" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "T5" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "T6" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+        {% endif %}
+
+        {%if class.meeting_time__day == "Wednesday" %}
+            <td>{{class.meeting_time__day}}</td>
+            {% if class.meeting_time__pid == "W1" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "W2" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "W3" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "W4" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "W5" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "W6" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+        {% endif %}
+
+        {%if class.meeting_time__day == "Thursday" %}
+            <td>{{class.meeting_time__day}}</td>
+            {% if class.meeting_time__pid == "TH1" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "TH2" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "TH3" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "TH4" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "TH5" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "TH6" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+        {% endif %}
+
+        {%if class.meeting_time__day == "Friday" %}
+            <td>{{class.meeting_time__day}}</td>
+            {% if class.meeting_time__pid == "F1" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "F2" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "F3" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "F4" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "F5" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "F6" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+        {% endif %}
+
+        {%if class.meeting_time__day == "Saturday" %}
+            <td>{{class.meeting_time__day}}</td>
+            {% if class.meeting_time__pid == "S1" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "S2" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "S3" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "S4" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "S5" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+            {% if class.meeting_time__pid == "S6" %}
+                <td>{{ class.course__name }} | {{class.instructor__name}} | {{class.room__r_number}}</td>
+            {% else %}
+                <td>Library</td>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</table>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'constant/main.html' %}
+
+{% block title %} Add Batch {% endblock %}
+
+{% block content %}
+<!-- {% include 'constant/header.html' %} -->
+
+<div class="splash-secondary">
+    <div class="login">
+        <h1>Add Batch</h1>
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="input-box">
+                <label for="UserId">Id</label>
+                {{form.section_id}}
+            </div>
+
+            <div class="input-box">
+                <label for="UserId">Department</label>
+                {{form.department}}
+            </div>
+
+            <div class="input-box">
+                <label for="UserId">Number of Classes in week</label>
+                {{form.num_class_in_week}}
+            </div>
+            
+            <input type="submit" value="Add" class="button">
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

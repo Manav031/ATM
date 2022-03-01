@@ -1,0 +1,35 @@
+{% extends 'constant/main.html' %}
+{% block title %}SignUp{% endblock %}
+
+{% block content %}
+{% include 'constant/header.html' %}
+    <div class="splash-secondary">
+        <div class="login">
+            <h1>SignUp</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="input-box">
+                    <label for="UserId">UserId</label>
+                    {{form.username}}
+                </div>
+                <div class="input-box">
+                    <label for="department-category">Email</label>
+                    {{form.email}}
+                </div>
+                <div class="input-box">
+                    <label for="pass">Password</label>
+                    {{form.password1}}
+                </div>
+                <div class="input-box">
+                    <label for="pass">Confirm Password</label>
+                    {{form.password2}}
+                </div>
+                <input type="submit" value="Create" class="button">
+                <p style="font-size: 18px;">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+
+            </form>
+        </div>
+    </div>
+{% include 'constant/footer.html' %}
+
+{% endblock %}
